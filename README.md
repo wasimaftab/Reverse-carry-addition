@@ -40,5 +40,24 @@ Generalized reverse-carry addition algorithm is implemented in a C program that 
 2. The program will be compiled with gcc and executed on the command-line.
 3. The program will take two test-input files as input arguments (mapped to argv[1], argv[2]), each file will contain a column vector of integer formatted data. Paired test-input files will have the  same number of elements; corresponding elements are operands to the reverse-carry addition  operation (see Example folder). 
 4. The  program  prints  integer  formatted  output  (one  value  per  line)  to  stdout  (use  redirection to save to file, if desired).    
-5. One operand will always be an exact  power-of-two  in the range of  2^n  where  n = {0, 1, 2, 3,…,15}, the other operand will be  in the  range of [0, 2^31-1].  
+5. One operand will always be an exact  power-of-two  in the range of  2<sup>n</sup>  where  n = {0, 1, 2, 3,…,15}, the other operand will be  in the  range of [0, 2<sup>31</sup>-1].  
 6. Complexity is O(N) (see Logic & Analysis section in README).   
+
+### Logic & Analysis
+1. The code takes Two files as input (argv[1], argv[2]).
+2. The number of elements in both the i/p file is same as they are operands of the Reverse Binary Addition.
+3. One file contains the numbers in the range [0-2<sup>31</sup>-1] and the other contains numbers of the form 2<sup>n</sup> where n= {0, 1, 2 ... 15}.
+4. The program first converts both the decimal numbers into its binary equivalent and then calls the binary add subroutine which recursively adds every pair of bits of the numbers while making the carry propagate through left to right.
+
+* In every loop the decimal to binary conversion takes O(log<sub>2</sub>n1)+ O(log<sub>2</sub>n2). Where n1, n2 are the
+decimal operands.
+* The recursive addition takes O(8) in the worst case for every bit pair addition. Therefore for n<sub>b</sub> pair
+addition it takes O(8*n<sub>b</sub>). Where n<sub>b</sub> is maximum number of bits used in the binary representation.
+* Hence, one reverse carry addition takes {O(log<sub>2</sub>n1) + O(log<sub>2</sub>n2) + O(8\*n<sub>b</sub>)}. If there are N elements in every input file, therefore total run time is N*{O(log<sub>2</sub>n1) + O(log<sub>2</sub>n2) + O(8*n<sub>b</sub>)}.
+* In other words,time complexity = O(N\*log<sub>2</sub>(n1\*n2)) + O(8\*N\*n<sub>b</sub>) ....... (1)
+* Considering the maximum values of n1 and n2 we have log<sub>2</sub>(n1\*n2) = c, a constant.
+* Similarly we have 8*N*nb = k, another constant
+* Therefore Eq. (1) becomes, time complexity = O(c\*N) + O(k\*N) ....... (2)
+* R.H.S of equation (2) is nothing but O(constant\*N). Therefore the running time complexity of this Reverse-carry-addition algorithm is O(N).
+
+
