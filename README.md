@@ -60,4 +60,6 @@ addition it takes O(8*n<sub>b</sub>). Where n<sub>b</sub> is maximum number of b
 * Therefore Eq. (1) becomes, time complexity = O(c\*N) + O(k\*N) ....... (2)
 * R.H.S of equation (2) is nothing but O(constant\*N). Therefore the running time complexity of this Reverse-carry-addition algorithm is O(N).
 
+### Compile & Run
+compile it by running this command: **gcc -o rev_carry_add_wasim rev_carry_add_wasim.c -lm**. It witll create an object file **rev_carry_add_wasim**, which can then be run. For example using the data from Example folder, **./rev_carry_add_wasim a1.dat b1.dat**
 
