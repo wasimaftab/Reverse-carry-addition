@@ -55,7 +55,7 @@ addition it takes O(8*n<sub>b</sub>). Where n<sub>b</sub> is maximum number of b
 * Hence, one reverse carry addition takes {O(log<sub>2</sub>n1) + O(log<sub>2</sub>n2) + O(8\*n<sub>b</sub>)}. If there are N elements in every input file, therefore total run time is N*{O(log<sub>2</sub>n1) + O(log<sub>2</sub>n2) + O(8*n<sub>b</sub>)}.
 * In other words,time complexity = O(N\*log<sub>2</sub>(n1\*n2)) + O(8\*N\*n<sub>b</sub>) ....... (1)
 * Considering the maximum values of n1 and n2 we have log<sub>2</sub>(n1\*n2) = c, a constant.
-* Similarly we have 8*N*nb = k, another constant
+* Similarly we have 8*N*n<sub>b</sub> = k, another constant
 * Therefore Eq. (1) becomes, time complexity = O(c\*N) + O(k\*N) ....... (2)
 * R.H.S of equation (2) is nothing but O(constant\*N). Therefore the running time complexity of this Reverse-carry-addition algorithm is O(N).
 
