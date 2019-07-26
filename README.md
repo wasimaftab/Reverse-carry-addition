@@ -40,8 +40,7 @@ Generalized reverse-carry addition algorithm is implemented in a C program that 
 2. The program will be compiled with gcc and executed on the command-line.
 3. The program will take two test-input files as input arguments (mapped to argv[1], argv[2]), each file will contain a column vector of integer formatted data. Paired test-input files will have the  same number of elements; corresponding elements are operands to the reverse-carry addition  operation (see Example folder). 
 4. The  program  prints  integer  formatted  output  (one  value  per  line)  to  stdout  (use  redirection to save to file, if desired).    
-5. One operand will always be an exact  power-of-two  in the range of  2<sup>n</sup>  where  n = {0, 1, 2, 3,…,15}, the other operand will be  in the  range of [0, 2<sup>31</sup>-1].  
-6. Complexity is O(N) (see Logic & Analysis section in README).   
+5. One operand will always be an exact  power-of-two  in the range of  2<sup>n</sup>  where  n = {0, 1, 2, 3,…,15}, the other operand will be  in the  range of [0, 2<sup>31</sup>-1].   
 
 ### Logic & Analysis
 1. The code takes Two files as input (argv[1], argv[2]).
