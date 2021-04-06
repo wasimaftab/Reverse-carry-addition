@@ -33,12 +33,12 @@ For the linear progression, the increments from 0 to N-1 consist of adding a bit
 For both the forward- and reverse-carry examples above, it is only the middle column (forward 1 to 2;  reverse 2 to 1) where a carry occurs (the “1”s bits line up and the addition produces the carry).  If you  are unfamiliar with binary addition and the examples above are not clear there a many “binary addition”  tutorials available on-line that demonstrate the basics of binary addition and forward carry propagation.
 
 #### Programming Implementation
-Generalized reverse-carry addition algorithm is implemented in a C program that meets the following criteria 
+Generalized reverse-carry addition algorithm is implemented in a C code that meets the following criteria 
 
 #### Criteria
-1. Implemented algorithm is non-saturating, handles overflow/underflow conditions.  
-2. The program will be compiled with gcc and executed on the command-line.
-3. The program will take two test-input files as input arguments (mapped to argv[1], argv[2]), each file will contain a column vector of integer formatted data. Paired test-input files will have the  same number of elements; corresponding elements are operands to the reverse-carry addition  operation (see Example folder). 
+1. The algorithm is non-saturating i.e., handles overflow/underflow conditions.  
+2. The program can be compiled with gcc and executed from the command-line.
+3. The program expects two input files as input arguments (mapped to argv[1], argv[2]), each file will contain a column vector of integer formatted data. Paired test-input files will have the  same number of elements; corresponding elements are operands to the reverse-carry addition  operation (see Example folder). 
 4. The  program  prints  integer  formatted  output  (one  value  per  line)  to  stdout  (use  redirection to save to file, if desired).    
 5. One operand will always be an exact  power-of-two  in the range of  2<sup>n</sup>  where  n = {0, 1, 2, 3,…,15}, the other operand will be  in the  range of [0, 2<sup>31</sup>-1].   
 
